@@ -55,6 +55,7 @@ void main()
 {
 
 	int username,password,receiver,amount,i,c1,c2,chan,ch;
+	
     	u1.bal=500;            
 	u1.myaddress=11;
 	u2.bal=1000;           
@@ -68,11 +69,14 @@ void main()
     
 	int username1=1,username2=2,username3=3,username4=4,username5=5;
     	int password1=123,password2=234,password3=345,password4=456,password5=567;
+	
     	printf("username");
     	scanf("%d",&username);
     	printf("password");
     	scanf("%d",&password);
-    	while(1){                                                                           
+	
+    	while(1){ 
+		
 		//user1
     		if((username==username1)&&(password==password1))
     		{
@@ -90,8 +94,9 @@ void main()
                     			scanf("%d",&receiver);
                     			printf("denomination");
                    			scanf("%d",&amount);
-                    			if(amount>u1.bal)
+                    			if(amount>u1.bal){
                         			printf("Transaction Unsuccessful");
+					}
                     			else
                     			{
 
@@ -126,11 +131,12 @@ void main()
 				case 4:
 					exit(0);
 
-        			}
+        		}
 		}
 	}
 
-	while(1){                                                                                           
+	while(1){         
+		
         		//user2
 		if((username==username2)&&(password==password2)){
         			printf("1.Balance\n2.Transfer\n3.Channel\n4.Logout\nEnter Choice\n");
@@ -146,8 +152,9 @@ void main()
                     			scanf("%d",&receiver);
                     			printf("denomination");
                     			scanf("%d",&amount);
-                    			if(amount>u2.bal)
+                    			if(amount>u2.bal){
                         			printf("Transaction Unsuccessful");
+					}
                     			else
                     			{
 
@@ -180,10 +187,11 @@ void main()
             			case 4:
 					exit(0);
 
-        			}
+        		}
     		}
 	}
-	while(1){                                                                                       
+	while(1){  
+		
 		//user3
     		if((username==username3)&&(password==password3)){
         			printf("1.Balance\n2.Transfer\n3.Channel\n4.Logout\nEnter Choice:\n");
@@ -200,8 +208,9 @@ void main()
                     			scanf("%d",&receiver);
                     			printf("denomination");
                     			scanf("%d",&amount);
-                    			if(amount>u3.bal)
+                    			if(amount>u3.bal){
                         				printf("Transaction Unsuccessful");
+					}
                     			else{
 
                             			ch2[i].from=u3.myaddress;
@@ -235,10 +244,11 @@ void main()
             			case 4:
 					exit(0);
 
-        			}
+        		}
     		}
 	}
-    	while(1){                                                                                       
+    	while(1){       
+		
 		//user4
     		if((username==username4)&&(password==password4)){
         			printf("1.Balance\n2.Transfer\n3.Channel\n4.Logout\nEnter Choice:\n");
@@ -254,8 +264,9 @@ void main()
                     			scanf("%d",&receiver);
                     			printf("denomination");
                     			scanf("%d",&amount);
-                    			if(amount>u4.bal)
+                    			if(amount>u4.bal){
                         			printf("Transaction Unsuccessful");
+					}
                    			else
                     			{
 
@@ -290,10 +301,11 @@ void main()
             			case 4:
 					exit(0);
 
-        			}
+        		}
     		}
     	}
-    	while(1){                                                                                           
+    	while(1){
+		
 		//user5
     		if((username==username5)&&(password==password5)){
         			printf("1.Balance\n2.Transfer\n3.Channel 1\nchannel 2\n4.Logout\nEnter Choice:\n");
@@ -312,8 +324,9 @@ void main()
                     				scanf("%d",&receiver);
                    				printf("denomination");
                     				scanf("%d",&amount);
-                    				if(amount>u5.bal)
+                    				if(amount>u5.bal){
                         					printf("Transaction Unsuccessful");
+						}
                     			else{
 
                             			ch1[i].from=u5.myaddress;
@@ -383,7 +396,7 @@ void main()
             				case 4:
 						exit(0);
 
-        			}
+        		}
     		}
     	}
 }
